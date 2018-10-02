@@ -6,7 +6,7 @@ public class turret_enable : MonoBehaviour {
     public GameObject acamera,ship;
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.W) && !other.gameObject.GetComponent<Player_Movement>().usingShields)
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.W))
         {
             if (other.gameObject.GetComponent<Player_Movement>().speed != 0)
                 other.gameObject.GetComponent<Player_Movement>().speed = 0;
